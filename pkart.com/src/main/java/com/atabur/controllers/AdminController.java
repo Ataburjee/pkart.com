@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.atabur.configuration.SecurityUser;
@@ -37,7 +36,6 @@ import com.atabur.repositories.CustomerRepository;
 import com.atabur.services.AdminService;
 
 @RestController
-@RequestMapping("/pkart.com")
 public class AdminController {
 
 	@Autowired
@@ -58,10 +56,7 @@ public class AdminController {
 	
 	@Autowired
 	private CustomerRepository customerRepository;
-	
-//	@Autowired
-//	private CustomerService customerService;
-	
+		
 	@CrossOrigin
 	@PostMapping("/admin/signup")
 	public ResponseEntity<Message> registerAdminHandler(@Valid @RequestBody Admin admin) throws AdminException{
@@ -132,13 +127,5 @@ public class AdminController {
 		
 		return new ResponseEntity<Customer>(customer,HttpStatus.FOUND);
 	}
-	
-//	@CrossOrigin
-//	@DeleteMapping("/admin/customer/delete/{id}")
-//	public ResponseEntity<Customer> deleteCustomerHandler (@PathVariable Long id) throws CustomerException{
-//		
-//		return new ResponseEntity<Customer>(customerService.deleteCustomerByID(id),HttpStatus.ACCEPTED);
-//	}
-	
 	
 }

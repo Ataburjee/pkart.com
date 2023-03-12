@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.atabur.exceptions.CustomerException;
@@ -21,7 +20,6 @@ import com.atabur.models.Payment;
 import com.atabur.services.PaymentService;
 
 @RestController
-@RequestMapping("/pkart.com")
 public class PaymentController {
 	
 	@Autowired

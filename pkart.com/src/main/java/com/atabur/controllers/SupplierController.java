@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.atabur.exceptions.CustomerException;
@@ -25,7 +24,6 @@ import com.atabur.payload.responses.SupplierResponse;
 import com.atabur.services.SupplierService;
 
 @RestController
-@RequestMapping("/pkart.com")
 public class SupplierController {
 	
 	@Autowired

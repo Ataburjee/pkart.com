@@ -20,7 +20,7 @@ import com.atabur.models.Category;
 import com.atabur.services.ProductCategoryService;
 
 @RestController
-@RequestMapping("/pkart.com/admin/category")
+@RequestMapping("/admin/category")
 public class ProductCategoryController {
 	
 	@Autowired
@@ -44,7 +44,7 @@ public class ProductCategoryController {
 		return new ResponseEntity<Category>(productCategoryService.updateCategory(productCategory), HttpStatus.OK);
 	}
 	
-	@GetMapping("/all")
+	@GetMapping({"/all","/"})
 	public ResponseEntity<List<Category>> getAllCategoryHandler() throws ProductCategoryException{
 		
 		return new ResponseEntity<List<Category>>(productCategoryService.getAllProductCategory(), HttpStatus.FOUND);
