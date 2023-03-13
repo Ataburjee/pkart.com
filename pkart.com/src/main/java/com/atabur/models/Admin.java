@@ -25,7 +25,7 @@ public class Admin implements User {
 	@NotNull(message = "Admin name must not be null...!")
 	private String name;
 	
-	private LocalDateTime createdAt;
+	private LocalDateTime createdAt = LocalDateTime.now();
 	
 	@NotNull
 	@Email
