@@ -15,7 +15,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-
+import java.time.LocalDateTime;
 import org.springframework.format.annotation.NumberFormat;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -43,6 +43,8 @@ public class Customer implements User{
 
 	@NotNull(message = "Confirm Password must not be null...!")
 	private String confirm_password;
+	
+	private LocalDateTime createdAt = LocalDateTime.now();
 	
 	@NotNull
 	@Size(min = 10, max = 10, message = "Mobile No should be of 10 digit")
