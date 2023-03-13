@@ -51,9 +51,9 @@ public class MyConfiguration {
 	        .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
 	        .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 	        .authorizeRequests()
-	        .antMatchers("/pkart.com/user/signin","/pkart.com/admin/signup","/pkart.com/customer/signup","/pkart/user/products/all").permitAll()
-			.antMatchers("/pkart.com/admin/**").hasAuthority("ADMIN")
-			.antMatchers("/pkart.com/customer/**").hasAuthority("CUSTOMER")
+	        .antMatchers("/user/signin","/admin/signup","/customer/signup","/user/products/all").permitAll()
+			.antMatchers("/admin/**").hasAuthority("ADMIN")
+			.antMatchers("/customer/**").hasAuthority("CUSTOMER")
 			;
 	    
 	    http.authenticationProvider(authenticationProvider());
